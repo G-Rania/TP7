@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bat "./gradlew test"
+                bat "./gradlew build"
                 archiveArtifacts  '**/build/libs/*.jar'
                 echo 'Testing..'
             }
