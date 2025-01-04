@@ -5,8 +5,10 @@ pipeline {
         stage('Test') {
             steps {
                 bat "./gradlew build"
-                archiveArtifacts  '**/build/libs/*.jar'
+                archiveArtifacts  '**/build/libs/tesResults/*.jar'
                 echo 'Testing..'
+                echo 'Generating Cucumber Reports...'
+                cucumber '**/build/libs/cucumber/*.json'
             }
         }
         /*stage('Code Analysis') {
