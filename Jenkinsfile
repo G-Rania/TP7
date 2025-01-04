@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bat "./gradlew build"
+                echo 'Testing & archiving..'
+                bat "./gradlew test"
+                bat "./gradlew generateCucumberReports"
                 archiveArtifacts '**/build/libs/*.jar'
                 //junit '**/build/test-results/**/*.xml'
-                echo 'Testing & archiving..'
-                echo 'Generating cucumber reports...'
-                cucumber '**/build/reports/cucumber/*.html'
+                //cucumber '**/build/reports/cucumber/cucumber-html-reports/*.html'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
         stage('Build') {
                  steps {
                      echo 'Building the Project...'
-                     bat './gradlew assemble'
+                     bat './gradlew build'
                      echo 'Generating Documentation...'
                      bat './gradlew javadoc' // Génération de la documentation
                      archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
