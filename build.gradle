@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    //id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.25"
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.25"
     id 'jacoco'
     id("org.sonarqube") version "6.0.1.5171"
     id 'maven-publish'
