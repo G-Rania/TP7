@@ -7,7 +7,7 @@ pipeline {
                 bat "./gradlew build"
                 archiveArtifacts  '**/build/libs/*.jar'
                 echo 'Testing & archiving..'
-                echo 'Generating Cucumber Reports...'
+                echo 'Generating cucumber reports...'
                 cucumber '**/build/reports/cucumber/*.html'
             }
         }
