@@ -11,15 +11,5 @@ pipeline {
                 cucumber '**/build/libs/cucumber/*.json'
             }
         }
-        /*stage('Code Analysis') {
-            steps {
-
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }*/
     }
 }
