@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Testing & archiving..'
                 bat "./gradlew test"
+                junit '**/build/test-results/test/*.xml'
+                cucumber '**/build/reports/cucumber/*.json'
                 archiveArtifacts '**/build/libs/*.jar'
             }
         }
