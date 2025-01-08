@@ -9,6 +9,9 @@ pipeline {
                 junit '**/build/test-results/test/*.xml'
                 cucumber '**/build/reports/cucumber/*.json'
                 archiveArtifacts '**/build/libs/*.jar'
+                archiveArtifacts '**/build/reports/jacoco/test/html/*.*'
+                archiveArtifacts '**/build/reports/test-results/test/*.xml'
+
             }
         }
 
