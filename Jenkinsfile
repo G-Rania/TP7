@@ -12,7 +12,7 @@ pipeline {
 
          stage('Code Analysis') {
             steps {
-                echo 'Starting Code Analysis with SonarQube...'
+                echo 'Starting Code Analysis With SonarQube...'
                 withSonarQubeEnv('Sonar') {
                     bat './gradlew sonar'
                 }
