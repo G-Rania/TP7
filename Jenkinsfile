@@ -10,8 +10,7 @@ pipeline {
                 cucumber '**/build/reports/cucumber/*.json'
                 archiveArtifacts '**/build/libs/*.jar'
                 archiveArtifacts '**/build/jacocoHtml/*.*'
-                archiveArtifacts '**/build/reports/test-results/test/*.xml'
-
+                archiveArtifacts '**/build/test-results/test/*.xml'
             }
         }
 
