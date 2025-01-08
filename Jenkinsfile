@@ -10,21 +10,21 @@ pipeline {
             }
         }
 
-         /*stage('Code Analysis') {
+         stage('Code Analysis') {
             steps {
                 echo 'Starting Code Analysis with SonarQube...'
                 withSonarQubeEnv('Sonar') {
                     bat './gradlew sonar'
                 }
             }
-         }*/
+         }
 
-         /*stage('Code Quality') {
+         stage('Code Quality') {
              steps {
                  echo 'Checking SonarQube Quality Gates...'
                  waitForQualityGate abortPipeline: true
             }
-         }*/
+         }
 
         stage('Build') {
                  steps {
